@@ -22,7 +22,7 @@ import org.hapjs.mockup.app.impl.R;
 public class AppItemAdapter extends RecyclerView.Adapter<AppItemAdapter.ViewHolder> {
 
     private final List<AppItem> mValues;
-
+getItemCount
     public AppItemAdapter(Collection<AppItem> items) {
         mValues = new ArrayList<>(items);
     }
@@ -69,6 +69,7 @@ public class AppItemAdapter extends RecyclerView.Adapter<AppItemAdapter.ViewHold
                             Source src = new Source();
                             src.setPackageName(mView.getContext().getPackageName());
                             src.setType(Source.TYPE_OTHER);
+                            // 调起 launchActivity 
                             LauncherActivity
                                     .launch(mView.getContext(), mItem.getPackageName(), "/", src);
                         }

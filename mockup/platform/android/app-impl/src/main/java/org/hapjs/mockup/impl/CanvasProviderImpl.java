@@ -10,6 +10,7 @@ import android.view.View;
 import org.hapjs.component.Component;
 import org.hapjs.widgets.canvas.CanvasProvider;
 
+// canvas 代码貌似不全不必关注
 public class CanvasProviderImpl implements CanvasProvider {
 
     @Override

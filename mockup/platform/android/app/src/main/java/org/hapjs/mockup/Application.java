@@ -10,6 +10,7 @@ import androidx.multidex.MultiDex;
 import org.hapjs.common.utils.hiddenapi.Reflection;
 import org.hapjs.runtime.RuntimeApplication;
 
+// app 初始化
 public class Application extends RuntimeApplication {
 
     @Override
