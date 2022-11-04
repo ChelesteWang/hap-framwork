@@ -19,6 +19,7 @@ import org.hapjs.model.SubpackageInfo;
 public class PackageUtils {
     private static final String TAG = "PackageUtils";
 
+    // 从 rpk 中获取包名无需特别关注
     public static String getRpksPackageName(File packageFile) {
         ZipInputStream zipInputStream = null;
         FileInputStream fileInputStream = null;

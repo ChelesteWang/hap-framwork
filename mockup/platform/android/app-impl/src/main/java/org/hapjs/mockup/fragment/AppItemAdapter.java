@@ -19,6 +19,7 @@ import org.hapjs.logging.Source;
 import org.hapjs.mockup.app.AppItem;
 import org.hapjs.mockup.app.impl.R;
 
+// 开屏快应用列表逻辑
 public class AppItemAdapter extends RecyclerView.Adapter<AppItemAdapter.ViewHolder> {
 
     private final List<AppItem> mValues;
@@ -66,9 +67,12 @@ public class AppItemAdapter extends RecyclerView.Adapter<AppItemAdapter.ViewHold
                     new View.OnClickListener() {
                         @Override
                         public void onClick(View v) {
+                            // source 用于
                             Source src = new Source();
                             src.setPackageName(mView.getContext().getPackageName());
                             src.setType(Source.TYPE_OTHER);
+                            // 调起 launchActivity 
+                            // platform/platform/android/platform/src/main/java/org/hapjs/LauncherActivity.java
                             LauncherActivity
                                     .launch(mView.getContext(), mItem.getPackageName(), "/", src);
                         }

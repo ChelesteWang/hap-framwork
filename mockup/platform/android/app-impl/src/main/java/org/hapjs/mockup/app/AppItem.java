@@ -8,6 +8,7 @@ package org.hapjs.mockup.app;
 import java.io.File;
 import org.hapjs.model.AppInfo;
 
+// app 应用实体类
 public class AppItem {
     public static final int STATE_OK = 0;
     public static final int STATE_INSTALL_AVAILABLE = 1;
