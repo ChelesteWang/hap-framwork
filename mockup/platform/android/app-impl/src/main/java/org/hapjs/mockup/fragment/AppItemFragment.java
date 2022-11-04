@@ -22,6 +22,7 @@ import org.hapjs.mockup.app.impl.R;
 
 /**
  * A fragment representing a list of Items.
+ * 目前看起来用于快应用列表渲染相关逻辑
  */
 public class AppItemFragment extends Fragment {
     private RecyclerView mRecycler;

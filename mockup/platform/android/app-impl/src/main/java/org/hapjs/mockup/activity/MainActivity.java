@@ -14,6 +14,7 @@ import androidx.fragment.app.FragmentManager;
 import org.hapjs.mockup.app.impl.R;
 import org.hapjs.mockup.fragment.AppItemFragment;
 
+// 主页面逻辑
 public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -21,6 +21,7 @@ import org.hapjs.logging.LogHelper;
 import org.hapjs.logging.Source;
 import org.hapjs.utils.ActivityUtils;
 
+// deeplink 唤起相关逻辑
 public class DeepLinkClient implements LauncherManager.LauncherClient {
     protected static final String PARAM_SOURCE = "__SRC__";
     protected static final String PARAM_SOURCE_SCENE = "__SS__";
