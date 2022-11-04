@@ -23,7 +23,7 @@ import org.hapjs.mockup.app.impl.R;
 public class AppItemAdapter extends RecyclerView.Adapter<AppItemAdapter.ViewHolder> {
 
     private final List<AppItem> mValues;
-getItemCount
+
     public AppItemAdapter(Collection<AppItem> items) {
         mValues = new ArrayList<>(items);
     }
