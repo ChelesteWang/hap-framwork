@@ -27,6 +27,8 @@ import org.hapjs.mockup.app.AppItem;
 import org.hapjs.mockup.app.AppManager;
 import org.hapjs.model.SubpackageInfo;
 
+
+// 包分发代码
 public class DistributionProviderImpl implements DistributionProvider {
     private static final String TAG = "DistributionProviderImp";
     private Context mContext;

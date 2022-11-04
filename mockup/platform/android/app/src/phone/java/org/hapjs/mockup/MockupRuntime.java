@@ -17,12 +17,14 @@ import org.hapjs.net.NetLoaderProvider;
 import org.hapjs.render.cutout.CutoutProvider;
 import org.hapjs.render.cutout.DefaultCutoutProvider;
 import org.hapjs.runtime.ProviderManager;
-import org.hapjs.widgets.canvas.CanvasProvider;
-import org.hapjs.widgets.video.manager.DefaultPlayerManagerProviderImpl;
-import org.hapjs.widgets.video.manager.PlayerManagerProvider;
 
 
-// app 启动入口
+// import org.hapjs.widgets.canvas.CanvasProvider;
+// import org.hapjs.widgets.video.manager.DefaultPlayerManagerProviderImpl;
+// import org.hapjs.widgets.video.manager.PlayerManagerProvider;
+
+
+// app 启动入口 依赖注入后的时机湖入口
 @DependencyAnnotation(key = MockupRuntime.PROPERTY_RUNTIME_IMPL_CLASS)
 public class MockupRuntime extends PlatformRuntime {
 
@@ -34,11 +36,14 @@ public class MockupRuntime extends PlatformRuntime {
 
         // 调用方法单例
         ProviderManager pm = ProviderManager.getDefault();
+        // rpk 分发使用
         pm.addProvider(DistributionProvider.NAME, new DistributionProviderImpl(mContext));
+        // log 日志使用
         pm.addProvider(LogProvider.NAME, new LogProviderImpl());
-        // pm.addProvider(CanvasProvider.NAME, new CanvasProviderImpl());
+        // 屏幕裁剪（水滴屏刘海屏适配）
         pm.addProvider(CutoutProvider.NAME, new DefaultCutoutProvider());
-        pm.addProvider(NetLoaderProvider.NAME, new DefaultNetLoaderProviderImpl());
-        pm.addProvider(PlayerManagerProvider.NAME, new DefaultPlayerManagerProviderImpl());
+        // pm.addProvider(CanvasProvider.NAME, new CanvasProviderImpl());
+        // pm.addProvider(NetLoaderProvider.NAME, new DefaultNetLoaderProviderImpl());
+        // pm.addProvider(PlayerManagerProvider.NAME, new DefaultPlayerManagerProviderImpl());
     }
 }

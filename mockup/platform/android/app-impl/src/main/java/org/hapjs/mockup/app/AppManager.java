@@ -26,6 +26,7 @@ import org.hapjs.model.AppInfo;
 import org.hapjs.model.SubpackageInfo;
 import org.hapjs.runtime.Runtime;
 
+// rpk 管理器
 public class AppManager {
     public static final String RPK_FILE_EXTENSION = ".rpk";
     public static final String RPKS_FILE_EXTENSION = ".rpks";
